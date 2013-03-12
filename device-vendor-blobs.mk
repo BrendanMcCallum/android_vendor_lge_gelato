@@ -72,6 +72,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_COPY_FILES += \
     vendor/lge/gelato/proprietary/sensors.gelato.so:system/lib/hw/sensors.gelato.so \
+    vendor/lge/gelata/proprietary/libsensorservice.so:system/lib/libsensorservice.so \
     vendor/lge/gelato/proprietary/ami304d:system/bin/ami304d
 
 # GPS
@@ -112,8 +113,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/libaudioeq.so:system/lib/libaudioeq.so \
-    vendor/lge/gelato/proprietary/libaudio.so:system/lib/libaudio.so
+    vendor/lge/gelato/proprietary/libaudioeq.so:system/lib/libaudioeq.so
 
 # LGE services
 PRODUCT_COPY_FILES += \
