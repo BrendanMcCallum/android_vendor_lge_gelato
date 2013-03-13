@@ -16,7 +16,7 @@
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
-   vendor/lge/gelato/proprietary/libril.so:obj/lib/libril.so
+   vendor/lge/gelato/proprietary/libril.so:obj/lib/libril.so 
 
 # RIL
 PRODUCT_COPY_FILES += \
@@ -72,7 +72,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_COPY_FILES += \
     vendor/lge/gelato/proprietary/sensors.gelato.so:system/lib/hw/sensors.gelato.so \
-    vendor/lge/gelata/proprietary/libsensorservice.so:system/lib/libsensorservice.so \
+    vendor/lge/gelato/proprietary/libsensorservice.so:system/lib/libsensorservice.so \
     vendor/lge/gelato/proprietary/ami304d:system/bin/ami304d
 
 # GPS
