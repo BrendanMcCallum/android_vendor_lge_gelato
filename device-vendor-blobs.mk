@@ -16,75 +16,84 @@
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
-   vendor/lge/gelato/proprietary/libril.so:obj/lib/libril.so 
+   vendor/lge/gelato/proprietary/libril.so:obj/lib/libril.so \
+   vendor/lge/gelato/proprietary/libcamera.so:obj/lib/libcamera.so
 
 # RIL
 PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/libril-qc-1.so:system/lib/libril-qc-1.so \
-    vendor/lge/gelato/proprietary/liboncrpc.so:system/lib/liboncrpc.so \
-    vendor/lge/gelato/proprietary/libdsm.so:system/lib/libdsm.so \
-    vendor/lge/gelato/proprietary/libqueue.so:system/lib/libqueue.so \
-    vendor/lge/gelato/proprietary/libdiag.so:system/lib/libdiag.so \
     vendor/lge/gelato/proprietary/libauth.so:system/lib/libauth.so \
+    vendor/lge/gelato/proprietary/libbcmwl.so:system/lib/libbcmwl.so \
     vendor/lge/gelato/proprietary/libcm.so:system/lib/libcm.so \
-    vendor/lge/gelato/proprietary/libnv.so:system/lib/libnv.so \
-    vendor/lge/gelato/proprietary/libpbmlib.so:system/lib/libpbmlib.so \
-    vendor/lge/gelato/proprietary/libwms.so:system/lib/libwms.so \
-    vendor/lge/gelato/proprietary/libwmsts.so:system/lib/libwmsts.so \
-    vendor/lge/gelato/proprietary/libmmgsdilib.so:system/lib/libmmgsdilib.so \
+    vendor/lge/gelato/proprietary/libdiag.so:system/lib/libdiag.so \
+    vendor/lge/gelato/proprietary/libdl.so:system/lib/libdl.so \
+    vendor/lge/gelato/proprietary/libdsm.so:system/lib/libdsm.so \
+    vendor/lge/gelato/proprietary/libdss.so:system/lib/libdss.so \
+    vendor/lge/gelato/proprietary/libdsutils.so:system/lib/libdsutils.so \
     vendor/lge/gelato/proprietary/libgsdi_exp.so:system/lib/libgsdi_exp.so \
     vendor/lge/gelato/proprietary/libgstk_exp.so:system/lib/libgstk_exp.so \
-    vendor/lge/gelato/proprietary/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
+    vendor/lge/gelato/proprietary/libidl.so:system/lib/libidl.so \
+    vendor/lge/gelato/proprietary/liblgerft.so:system/lib/liblgerft.so \
+    vendor/lge/gelato/proprietary/libmmgsdilib.so:system/lib/libmmgsdilib.so \
+    vendor/lge/gelato/proprietary/libnetutils.so:system/lib/libnetutils.so \
+    vendor/lge/gelato/proprietary/libnv.so:system/lib/libnv.so \
     vendor/lge/gelato/proprietary/liboem_rapi.so:system/lib/liboem_rapi.so \
-    vendor/lge/gelato/proprietary/libsnd.so:system/lib/libsnd.so \
+    vendor/lge/gelato/proprietary/liboncrpc.so:system/lib/liboncrpc.so \
+    vendor/lge/gelato/proprietary/libpbmlib.so:system/lib/libpbmlib.so \
     vendor/lge/gelato/proprietary/libqmi.so:system/lib/libqmi.so \
-    vendor/lge/gelato/proprietary/libdll.so:system/lib/libdll.so \
-    vendor/lge/gelato/proprietary/libbcmwl.so:system/lib/libbcmwl.so \
-    vendor/lge/gelato/proprietary/libdss.so:system/lib/libdss.so \
+    vendor/lge/gelato/proprietary/libqueue.so:system/lib/libqueue.so \
+    vendor/lge/gelato/proprietary/libreference-cdma-sms.so:system/lib/libreference-cdma-sms.so \
+    vendor/lge/gelato/proprietary/libreference-ril.so:system/lib/libreference-ril.so \
     vendor/lge/gelato/proprietary/libril.so:system/lib/libril.so \
-    vendor/lge/gelato/proprietary/rild:system/bin/rild 
-
-# GPS (this might be better off as device specific depending on how carriers have configured AGPS)
-PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/loc_parameter.ini:system/etc/loc_parameter.ini \
-    vendor/lge/gelato/proprietary/gps.gelato.so:system/lib/hw/gps.gelato.so \
-    vendor/lge/gelato/proprietary/gps.conf:system/etc/gps.conf
-
-# WiFi
-PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    vendor/lge/gelato/proprietary/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
-
-# Audio
-PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv 
-
-# Backlight
-PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/lights.gelato.so:system/lib/hw/lights.gelato.so
-
-# 2D (using proprietary because of poor performance of open source libs)
-PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/gralloc.default.so:system/lib/hw/gralloc.default.so \
-    vendor/lge/gelato/proprietary/gralloc.gelato.so:system/lib/hw/gralloc.gelato.so \
-    vendor/lge/gelato/proprietary/copybit.gelato.so:system/lib/hw/copybit.gelato.so
-
-# Sensors
-PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/sensors.gelato.so:system/lib/hw/sensors.gelato.so \
-    vendor/lge/gelato/proprietary/libsensorservice.so:system/lib/libsensorservice.so \
-    vendor/lge/gelato/proprietary/ami304d:system/bin/ami304d
+    vendor/lge/gelato/proprietary/libril-qc-1.so:system/lib/libril-qc-1.so \
+    vendor/lge/gelato/proprietary/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
+    vendor/lge/gelato/proprietary/libsnd.so:system/lib/libsnd.so \
+    vendor/lge/gelato/proprietary/libwms.so:system/lib/libwms.so \
+    vendor/lge/gelato/proprietary/libwmsts.so:system/lib/libwmsts.so \
+    vendor/lge/gelato/proprietary/libwpa_client.so:system/lib/libwpa_client.so \
+    vendor/lge/gelato/proprietary/libz.so:system/lib/libz.so
 
 # GPS
 PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/libloc_api.so:system/lib/libloc_api.so \
-    vendor/lge/gelato/proprietary/libgps.so:system/lib/libgps.so \
-    vendor/lge/gelato/proprietary/libloc.so:system/lib/libloc.so \
-    vendor/lge/gelato/proprietary/libloc.so:obj/lib/libloc.so \
+    vendor/lge/gelato/proprietary/gps.conf:system/etc/gps.conf \
+    vendor/lge/gelato/proprietary/gps.default.so:system/lib/hw/gps.default.so \
     vendor/lge/gelato/proprietary/libcommondefs.so:system/lib/libcommondefs.so \
-    vendor/lge/gelato/proprietary/libloc-rpc.so:system/lib/libloc-rpc.so
+    vendor/lge/gelato/proprietary/libloc_ext.so:system/lib/libloc_ext.so \
+    vendor/lge/gelato/proprietary/libloc-rpc.so:system/lib/libloc-rpc.so \
+    vendor/lge/gelato/proprietary/librpc.so:system/lib/librpc.so \
+    vendor/lge/gelato/proprietary/libloc_api-rpc-qc.so:system/lib/libloc_api-rpc-qc.so \
+    vendor/lge/gelato/proprietary/loc_parameter.ini:system/etc/loc_parameter.ini \
 
-# 3D
+# WiFi
+PRODUCT_COPY_FILES += \
+    vendor/lge/gelato/proprietary/cfg.dat:system/etc/firmware/wlan/cfg.dat \
+    vendor/lge/gelato/proprietary/qcom_fw.bin:system/etc/firmware/wlan/qcom_fw.bin \
+    vendor/lge/gelato/proprietary/qcom_wlan_nv.bin:system/etc/firmware/wlan/qcom_wlan_nv.bin \
+    vendor/lge/gelato/proprietary/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    vendor/lge/gelato/proprietary/nvram.txt:system/etc/wl/nvram.txt \
+    vendor/lge/gelato/proprietary/rtecdc.bin:system/etc/wl/rtecdc.bin \
+    vendor/lge/gelato/proprietary/rtecdc-apsta.bin:system/etc/wl/rtecdc-apsta.bin \
+    vendor/lge/gelato/proprietary/rtecdc-mfgtest.bin:system/etc/wl/rtecdc-mfgtest.bin \
+    vendor/lge/gelato/proprietary/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+
+# Audio
+PRODUCT_COPY_FILES += \
+    vendor/lge/gelato/proprietary/AudioFilter.csv:system/etc/AudioFilter.csv \
+    vendor/lge/gelato/proprietary/libaudioeq.so:system/lib/libaudioeq.so
+
+# Hardware - Still problematic with lighting on wake
+PRODUCT_COPY_FILES += \
+    vendor/lge/gelato/proprietary/gralloc.gelato.so:system/lib/hw/gralloc.gelato.so \
+    vendor/lge/gelato/proprietary/copybit.gelato.so:system/lib/hw/copybit.gelato.so \
+    vendor/lge/gelato/proprietary/lights.gelato.so:system/lib/hw/lights.gelato.so \
+    vendor/lge/gelato/proprietary/sensors.gelato.so:system/lib/hw/sensors.gelato.so
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    vendor/lge/gelato/proprietary/ami306d:system/bin/ami306d \
+    vendor/lge/gelato/proprietary/libhardware.so:system/lib/libhardware.so \
+    vendor/lge/gelato/proprietary/libsensorservice.so:system/lib/libsensorservice.so
+
+# EGL
 PRODUCT_COPY_FILES += \
     vendor/lge/gelato/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
     vendor/lge/gelato/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
@@ -92,62 +101,71 @@ PRODUCT_COPY_FILES += \
     vendor/lge/gelato/proprietary/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
     vendor/lge/gelato/proprietary/libgsl.so:system/lib/libgsl.so \
     vendor/lge/gelato/proprietary/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    vendor/lge/gelato/proprietary/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
+    vendor/lge/gelato/proprietary/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
 
-# Camera
+# Camera - WIP
 PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/liboemcamera.so:system/lib/liboemcamera.so \
+    vendor/lge/gelato/proprietary/libcamera.so:system/lib/libcamera.so \
+    vendor/lge/gelato/proprietary/libcameraservice.so:system/lib/libcameraservice.so \
+    vendor/lge/gelato/proprietary/libcamera_client.so:system/lib/libcamera_client.so \
+    vendor/lge/gelato/proprietary/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
     vendor/lge/gelato/proprietary/libmmipl.so:system/lib/libmmipl.so \
-    vendor/lge/gelato/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so
-
-# WiFi
-PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/nvram.txt:system/etc/wl/nvram.txt \
-    vendor/lge/gelato/proprietary/rtecdc.bin:system/etc/wl/rtecdc.bin \
-    vendor/lge/gelato/proprietary/rtecdc-apsta.bin:system/etc/wl/rtecdc-apsta.bin \
-    vendor/lge/gelato/proprietary/rtecdc-mfgtest.bin:system/etc/wl/rtecdc-mfgtest.bin
+    vendor/lge/gelato/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \
+    vendor/lge/gelato/proprietary/liboemcamera.so:system/lib/liboemcamera.so
 
 # SD Card
 PRODUCT_COPY_FILES += \
     vendor/lge/gelato/proprietary/vold.fstab:system/etc/vold.fstab
 
-# Audio
-PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/libaudioeq.so:system/lib/libaudioeq.so
-
 # LGE services
 PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/qmuxd:system/bin/qmuxd
+    vendor/lge/gelato/proprietary/qmuxd:system/bin/qmuxd \
+    vendor/lge/gelato/proprietary/rild:system/bin/rild \
+    vendor/lge/gelato/proprietary/port-bridge:system/bin/port-bridge
 
 # OMX
 PRODUCT_COPY_FILES += \
     vendor/lge/gelato/proprietary/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
     vendor/lge/gelato/proprietary/libOmxAacDec.so:system/lib/libOmxAacDec.so \
+    vendor/lge/gelato/proprietary/libomx_aacdec_sharedlibrary.so:system/lib/libomx_aacdec_sharedlibrary.so \
     vendor/lge/gelato/proprietary/libOmxAacEnc.so:system/lib/libOmxAacEnc.so \
     vendor/lge/gelato/proprietary/libOmxAdpcmDec.so:system/lib/libOmxAdpcmDec.so \
     vendor/lge/gelato/proprietary/libOmxAmrDec.so:system/lib/libOmxAmrDec.so \
+    vendor/lge/gelato/proprietary/libomx_amrdec_sharedlibrary.so:system/lib/libomx_amrdec_sharedlibrary.so \
     vendor/lge/gelato/proprietary/libOmxAmrEnc.so:system/lib/libOmxAmrEnc.so \
+    vendor/lge/gelato/proprietary/libomx_amrenc_sharedlibrary.so:system/lib/libomx_amrenc_sharedlibrary.so \
     vendor/lge/gelato/proprietary/libOmxAmrRtpDec.so:system/lib/libOmxAmrRtpDec.so \
+    vendor/lge/gelato/proprietary/libOmxAmrwbDec.so:system/lib/libOmxAmrwbDec.so \
+    vendor/lge/gelato/proprietary/libomx_avcdec_sharedlibrary.so:system/lib/libomx_avcdec_sharedlibrary.so \
+    vendor/lge/gelato/proprietary/libOmxCore.so:system/lib/libOmxCore.so \
     vendor/lge/gelato/proprietary/libOmxEvrcDec.so:system/lib/libOmxEvrcDec.so \
     vendor/lge/gelato/proprietary/libOmxEvrcEnc.so:system/lib/libOmxEvrcEnc.so \
+    vendor/lge/gelato/proprietary/libOmxEvrcHwDec.so:system/lib/libOmxEvrcHwDec.so \
     vendor/lge/gelato/proprietary/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \
+    vendor/lge/gelato/proprietary/libomx_m4vdec_sharedlibrary.so:system/lib/libomx_m4vdec_sharedlibrary.so \
+    vendor/lge/gelato/proprietary/libomx_mp3dec_sharedlibrary.so:system/lib/libomx_mp3dec_sharedlibrary.so \
     vendor/lge/gelato/proprietary/libOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \
     vendor/lge/gelato/proprietary/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \
+    vendor/lge/gelato/proprietary/libOmxOn2Dec.so:system/lib/libOmxOn2Dec.so \
+    vendor/lge/gelato/proprietary/libOmxQcelp13Dec.so:system/lib/libOmxQcelp13Dec.so \
     vendor/lge/gelato/proprietary/libOmxQcelp13Enc.so:system/lib/libOmxQcelp13Enc.so \
+    vendor/lge/gelato/proprietary/libOmxQcelpHwDec.so:system/lib/libOmxQcelpHwDec.so \
+    vendor/lge/gelato/proprietary/libomx_sharedlibrary.so:system/lib/libomx_sharedlibrary.so \
     vendor/lge/gelato/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \
     vendor/lge/gelato/proprietary/libOmxWmaDec.so:system/lib/libOmxWmaDec.so \
-    vendor/lge/gelato/proprietary/libOmxWmvDec.so:system/lib/libOmxWmvDec.so \
-    vendor/lge/gelato/proprietary/libOmxAmrwbDec.so:system/lib/libOmxAmrwbDec.so 
+    vendor/lge/gelato/proprietary/libOmxWmvDec.so:system/lib/libOmxWmvDec.so
 
-# Keyboard
-PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
-    vendor/lge/gelato/proprietary/gelato_keypad.kl:system/usr/keylayout/gelato_keypad.kl \
-    vendor/lge/gelato/proprietary/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    vendor/lge/gelato/proprietary/Broadcom_Bluetooth_HID.kl:system/usr/keylayout/Broadcom_Bluetooth_HID.kl \
-    vendor/lge/gelato/proprietary/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    vendor/lge/gelato/proprietary/gelato_keypad.kcm.bin:system/usr/keychars/gelato_keypad.kcm.bin
+# Touch
+PRODUCT_COPY_FILE += \
+    vendor/lge/gelato/proprietary/icudt44l.dat:system/usr/icu/icudt44l.dat
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
-    vendor/lge/gelato/proprietary/BCM4330B1_002.001.003.0221.0235.hcd:system/bin/BCM4330B1_002.001.003.0221.0235.hcd
+    vendor/lge/gelato/proprietary/audio.conf:system/etc/bluetooth/audio.conf \
+    vendor/lge/gelato/proprietary/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
+    vendor/lge/gelato/proprietary/blacklist.conf:system/etc/bluetooth/blacklist.conf \
+    vendor/lge/gelato/proprietary/input.conf:system/etc/bluetooth/input.conf \
+    vendor/lge/gelato/proprietary/main.conf:system/etc/bluetooth/main.conf \
+    vendor/lge/gelato/proprietary/BCM4330B1_002.001.003.0221.0235.hcd:system/bin/BCM4330B1_002.001.003.0221.0235.hcd \
+    vendor/lge/gelato/proprietary/btld:system/bin/btld \
+    vendor/lge/gelato/proprietary/bluetoothd:system/bin/bluetoothd
